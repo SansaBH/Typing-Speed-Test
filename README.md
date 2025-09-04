@@ -1,12 +1,41 @@
-# React + Vite
+# 🚀 Typing Speed Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun and interactive web app to test your typing speed, accuracy, and mistakes in real-time.  
+Built with **React + Vite** and styled using **Chakra UI**.
 
-Currently, two official plugins are available:
+![Typing Speed Preview](public/typing.webp)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
+- 📝 **Random Paragraphs** – Generates 2 to 4 sentences from a quotes API.  
+- 🎨 **Live Typing Feedback** – Highlights correct characters in green and incorrect ones in red.  
+- 🔵 **Next Character Guide** – Blue underline shows the next character to type.  
+- ⏱ **Live Stats** – Speed (WPM), mistakes, and accuracy update in real time.  
+- 📊 **Logs** – Keeps track of your completed attempts with speed, mistakes, accuracy, and timestamp.  
+- 🎭 **Themes** – Switch between Light, Dark, and Fun (Pink) themes.  
+- 👤 **Guest Login** – Play instantly as a guest, no sign-up required.  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🖼️ Demo Screenshot
+*(Add your deployed link here once uploaded to Vercel)*  
+Example: 👉 [Play Here](https://your-vercel-link.vercel.app)
+
+---
+
+## 🛠️ Tech Stack
+- **Frontend:** React (Vite)
+- **UI Library:** Chakra UI
+- **State Management:** React Hooks
+- **Deployment:** Vercel
+- **API:** [DummyJSON Quotes API](https://dummyjson.com/quotes)
+
+---
+
+## 📦 Installation & Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/SansaBH/Typing-Speed-Test.git
+   cd Typing-Speed-Test
