@@ -36,7 +36,6 @@ Example: 👉 [Play Here](https://your-vercel-link.vercel.app)
 ## 📦 Installation & Setup
 
 1. Clone the repository:
-   ```bash
    git clone https://github.com/SansaBH/Typing-Speed-Test.git
    cd Typing-Speed-Test
 
