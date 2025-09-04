@@ -39,3 +39,11 @@ Example: 👉 [Play Here](https://your-vercel-link.vercel.app)
    ```bash
    git clone https://github.com/SansaBH/Typing-Speed-Test.git
    cd Typing-Speed-Test
+2.Install dependencies:
+   npm install
+3.Start the development server:
+   npm run dev
+4.Open in browser:
+   http://localhost:5173
+
+
