@@ -29,28 +29,36 @@ function App({ setTheme }) {
   const inputRef = useRef(null);
 
   // Fetch random English sentences
-  const fetchParagraph = async () => {
-    try {
-      const res = await fetch("https://dummyjson.com/quotes/random/4");
-      if (!res.ok) throw new Error("Network response was not ok");
-      const data = await res.json();
+const fetchParagraph = async () => {
+  try {
+    const res = await fetch("https://dummyjson.com/quotes/random/4");
+    if (!res.ok) throw new Error("Network response was not ok");
+    const data = await res.json();
 
-      const numSentences = Math.floor(Math.random() * 3) + 2;
-      const selected = data.slice(0, numSentences);
+    const numSentences = Math.floor(Math.random() * 3) + 2;
+    const selected = data.slice(0, numSentences);
 
-      const text = selected.map((q) => q.quote).join(" ");
+    let text = selected.map((q) => q.quote).join(" ");
 
-      setParagraph(text);
-      setInput("");
-      setMistakes(0);
-      setSpeed(0);
-      setAccuracy(100);
-      setStartTime(null);
-    } catch (err) {
-      console.error("Failed to fetch paragraph:", err);
-      setParagraph("Error loading paragraph. Please try again.");
-    }
-  };
+    // Lowercase everything, then capitalize first letter after . ! ? or start
+    text = text
+      .toLowerCase()
+      .replace(/(^\s*[a-z])|([.!?]\s*[a-z])/g, (match) =>
+        match.toUpperCase()
+      );
+
+    setParagraph(text);
+    setInput("");
+    setMistakes(0);
+    setSpeed(0);
+    setAccuracy(100);
+    setStartTime(null);
+  } catch (err) {
+    console.error("Failed to fetch paragraph:", err);
+    setParagraph("Error loading paragraph. Please try again.");
+  }
+};
+
 
   useEffect(() => {
     fetchParagraph();
@@ -261,3 +269,4 @@ function App({ setTheme }) {
 }
 
 export default App;
+
